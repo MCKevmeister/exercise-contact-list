@@ -5,15 +5,12 @@ import { Link } from "react-router-dom";
 import ContactCard from '../components/ContactCard';
 import Modal from '../components/Modal';
 import avatar1 from '../../img/user_1.jpg';
-import ContactCards from "../components/ContactCards";
 
-
-export default class Contacts extends Flux.View {
+export default class Todds extends Flux.DashView {
     constructor(){
         super();
         this.state = {
-            showModal: false,
-            
+            showModal: false  
         };
     }
     render() {
@@ -24,9 +21,7 @@ export default class Contacts extends Flux.View {
                         <Link className="btn btn-success" to="/add">Add new contact</Link>
                     </p>
                     <div id="contacts" className="panel-collapse collapse show" aria-expanded="true">
-                        <ul className="list-group pull-down" id="contact-list">  
-                            <ContactCards />
-                        </ul>
+                        <h1> HELLO THIS IS TODDS</h1>
                     </div>
                 </div>
                 <Modal show={this.state.showModal} onClose={() => this.setState({showModal: false})} />
